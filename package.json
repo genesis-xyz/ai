@@ -1,0 +1,9 @@
+{
+  "name": "@genesis-xyz/ai",
+  "version": "0.0.1",
+  "module": "src/index.ts",
+  "type": "module",
+  "dependencies": {
+    "@passes/reqs": "^0.1.3"
+  }
+}
