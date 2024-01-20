@@ -13,7 +13,7 @@ bun add @genesis-xyz/ai
 Add this script to the `<head>` tag of your site:
 
 ```html
-<script src="https://unpkg.com/@passes/polyfill@^0.1.4"></script>
+<script src="https://unpkg.com/@passes/polyfill@^0.1.5"></script>
 ```
 
 ### Usage

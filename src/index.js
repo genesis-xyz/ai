@@ -4,12 +4,13 @@ import * as Wrappers from '@passes/reqs/wrappers';
 
 /**
  * Pass Request topic for requesting OpenAI API credentials
- * @type {import('@passes/reqs').RequestTopic<void, { apiKey: string; baseURL: string }>}
  */
 export const openAIAPIRequestTopic = new RequestTopic({
   id: 'xyz.genesis.ai.openai-api',
   requestBodyCodec: Codecs.Void,
-  resultBodyCodec: Codecs.Json,
+  resultBodyCodec: 
+    /** @type {import('@passes/reqs').Codec<{ apiKey: string; baseURL: string }>} */
+    (Codecs.Json),
 });
 
 /**
