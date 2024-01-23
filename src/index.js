@@ -6,7 +6,7 @@ import * as Wrappers from '@passes/reqs/wrappers';
  * Pass Request topic for requesting OpenAI API credentials
  */
 export const openAIAPIRequestTopic = new RequestTopic({
-  id: 'xyz.genesis.ai.openai-api',
+  id: 'xyz.genesis.ai.openai.api-v1',
   requestBodyCodec: Codecs.Void,
   resultBodyCodec: 
     /** @type {import('@passes/reqs').Codec<{ apiKey: string; baseURL: string }>} */
@@ -14,7 +14,7 @@ export const openAIAPIRequestTopic = new RequestTopic({
 });
 
 /**
- * A convenient function for requesting OpenAI API credentials, which uses https://genesis.xyz/ai/openai-api as the default provider.
+ * A convenient function for requesting OpenAI API credentials, which uses https://genesis.xyz/request as the default provider.
  */
 export async function requestOpenAIAPI() {
   const result = await Wrappers.Utils.sendRequestWithDefaultProvider({
