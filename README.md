@@ -27,7 +27,7 @@ type RequestOpenAIAPIResult = {
 };
 ```
 
-Example code: 
+#### With the `openai` sdk: 
 
 ```typescript
 import { requestOpenAIAPI } from '@genesis-xyz/ai';
@@ -41,6 +41,29 @@ const chat = await openai.chat.completions.create({
   stream: true,
   messages: [{ role: 'user', content: 'Hello OpenAI!' }],
 });
+```
+
+#### With client-side `fetch`:
+
+```typescript
+import { requestOpenAIAPI } from '@genesis-xyz/ai';
+import { OpenAI } from 'openai';
+
+// Request the user to "Sign In With OpenAI"
+const { baseURL, apiKey } = await requestOpenAIAPI();
+
+// Use fetch to request the OpenAI API
+const result = await fetch(`${baseURL}/chat/completions`, {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${apiKey}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'gpt-4',
+    messages: [{ role: 'user', content: 'Hello OpenAI!' }],
+  }),
+})
 ```
 
 
