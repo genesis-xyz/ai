@@ -72,7 +72,7 @@ const result = await fetch(`${baseURL}/chat/completions`, {
 <details>
   <summary>1. Why does this product exist?</summary>
   
-  **Because we believe it should be easier for developers to experiment and build new concepts for AI apps. **
+  **Because we believe it should be easier for developers to experiment and build new concepts for AI apps.**
     
   For each new app they build, developers currently need to manage the cost of using the OpenAI API. Apps that leverage cutting-edge models like GPT-4 can carry large costs if usage grows and the overhead costs can really add up if the developer is shipping many AI apps, but still searching for product-market fit. 
     
@@ -85,11 +85,13 @@ const result = await fetch(`${baseURL}/chat/completions`, {
   <summary>2. How does it work?</summary>
 
   **Requesting an OpenAI API key from the user**
+
       1. When a user first signs up for your app, a new tab opens and requests the user to enter their OpenAI API key and secure it with a Passkey.
       2. The API key is encrypted and stored for easy future access.
       3. Your app gets an `apiKey` and `baseURL` that it can use to configure the `openai` SDK.
   
   **Proxying the the OpenAI API**
+  
       1. Your app sends requests to the provided `baseURL`, which is a proxy to OpenAI's API.
       2. The proxy sends requests to OpenAI with the user's OpenAI API key.
       3. Responses from OpenAI are streamed to your app.
