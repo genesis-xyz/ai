@@ -84,15 +84,15 @@ const result = await fetch(`${baseURL}/chat/completions`, {
 
   **Requesting an OpenAI API key from the user**
 
-      1. When a user first signs up for your app, a new tab opens and requests the user to enter their OpenAI API key and secure it with a Passkey.
-      2. The API key is encrypted and stored for easy future access.
-      3. Your app gets an `apiKey` and `baseURL` that it can use to configure the `openai` SDK.
-  
+  1. When a user first signs up for your app, a new tab opens and requests the user to enter their OpenAI API key and secure it with a Passkey.
+  2. The API key is encrypted and stored for easy future access.
+  3. Your app gets an `apiKey` and `baseURL` that it can use to configure the `openai` SDK.
+
   **Proxying the the OpenAI API**
   
-      1. Your app sends requests to the provided `baseURL`, which is a proxy to OpenAI's API.
-      2. The proxy sends requests to OpenAI with the user's OpenAI API key.
-      3. Responses from OpenAI are streamed to your app.
+  1. Your app sends requests to the provided `baseURL`, which is a proxy to OpenAI's API.
+  2. The proxy sends requests to OpenAI with the user's OpenAI API key.
+  3. Responses from OpenAI are streamed to your app.
 </details>
 
 <details>
