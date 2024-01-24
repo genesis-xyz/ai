@@ -1,8 +1,8 @@
-## "Sign In With AI"
+## Sign In With AI
 
 Request an OpenAI API to make requests on behalf of your user's OpenAI account. Your app, their API usage.
 
-The user's OpenAI API keys will not be shared with your app. Instead, your app will receive an `apiKey` and `baseURL` for a proxy to the OpenAI API which uses your user's API keys.
+The user's OpenAI API keys will not be shared with your app. Instead, your app will receive an encrypted `apiKey` and a `baseURL` to a proxy to the OpenAI API which uses your user's API keys.
 
 ### Installation
 
@@ -79,26 +79,24 @@ const chat = await openai.chat.completions.create({
   - **Reverse proxy**. Genesis hosts a secure intermediary layer for proxying OpenAI API requests, which handles decrypting the user's API key, and forwarding the request to OpenAI. The reverse proxy allows the client to use the full functionality of the OpenAI API (including streaming) without ever handling the user API key.
 </details>
 
-<details>
-  <summary>4. For users: how do I get an OpenAI API key?</summary>
 
-  For now, it’s a manual process:
-  
-  1. If you already have an OpenAI account, sign in [on the developer platform](https://platform.openai.com/). If not, sign up for an account here.
-      
-     <img width="1512" alt="oai-dev-platform" src="https://github.com/genesis-xyz/ai/assets/1638987/0c450c17-9968-4704-92dc-bba72dc099f6">
-      
-  2. To get an API key, click the [lock icon](https://platform.openai.com/api-keys) in the left-side toolbar.
-      
-      <img width="1512" alt="dev-platform-sidebar-toggle" src="https://github.com/genesis-xyz/ai/assets/1638987/4870456b-7d51-4e21-94f6-d24628346de1">
+## For users: how do I get an OpenAI API key?
 
-  3. You’ll see all of the API keys that you’ve created on this page. To create a new API key, select `Create new secret key`, give it a name, and then copy the API key that appears. 
-      - Note: any previously created API keys can’t be retrieved from this page, so be sure to save the key when you create it.
-      
-      <img width="1512" alt="api-key-list" src="https://github.com/genesis-xyz/ai/assets/1638987/6d67ff7c-2986-41a4-9de2-f900516793d3">
-      
-  4. Paste the API key in Genesis and approve the request.
-      
-      <img width="1728" alt="genesis-request" src="https://github.com/genesis-xyz/ai/assets/1638987/50edcd88-dbee-4bc4-b3d6-e80262d43de0">
+For now, it’s a manual process:
 
-</details>
+1. If you already have an OpenAI account, sign in [on the developer platform](https://platform.openai.com/). If not, sign up for an account here.
+    
+   <img width="1512" alt="oai-dev-platform" src="https://github.com/genesis-xyz/ai/assets/1638987/0c450c17-9968-4704-92dc-bba72dc099f6">
+    
+2. To get an API key, click the [lock icon](https://platform.openai.com/api-keys) in the left-side toolbar.
+    
+    <img width="1512" alt="dev-platform-sidebar-toggle" src="https://github.com/genesis-xyz/ai/assets/1638987/4870456b-7d51-4e21-94f6-d24628346de1">
+
+3. You’ll see all of the API keys that you’ve created on this page. To create a new API key, select `Create new secret key`, give it a name, and then copy the API key that appears. 
+    - Note: any previously created API keys can’t be retrieved from this page, so be sure to save the key when you create it.
+    
+    <img width="1512" alt="api-key-list" src="https://github.com/genesis-xyz/ai/assets/1638987/6d67ff7c-2986-41a4-9de2-f900516793d3">
+    
+4. Paste the API key in Genesis and approve the request.
+    
+    <img width="1728" alt="genesis-request" src="https://github.com/genesis-xyz/ai/assets/1638987/50edcd88-dbee-4bc4-b3d6-e80262d43de0">
