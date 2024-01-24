@@ -20,7 +20,7 @@ By offering a way for users to sign in with their own OpenAI API key, Genesis pr
 bun add @genesis-xyz/ai
 ```
 
-Add this script to the `<head>` tag of your site:
+‼️ Add this script to the `<head>` tag of your site:
 
 ```html
 <script src="https://unpkg.com/@passes/polyfill@^0.1.5"></script>
