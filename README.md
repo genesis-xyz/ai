@@ -1,8 +1,18 @@
 ## Sign In With AI
 
-Request an OpenAI API to make requests on behalf of your user's OpenAI account. Your app, their API usage.
+Auth that enables users to sign in with their own OpenAI API key, so that you can build apps powered by users. Your app, their API usage.
 
-The user's OpenAI API keys will not be shared with your app. Instead, your app will receive an encrypted `apiKey` and a `baseURL` to a proxy to the OpenAI API which uses your user's API keys.
+User OpenAI API keys will not be shared with your app. Instead, your app will receive an `apiKey` and `baseURL` for a proxy to the OpenAI API which uses your user's API keys.
+
+## Why build apps using Sign In With AI?
+
+Because we believe it should be easier for developers to experiment and build new ideas for AI apps. 
+
+For each new app they build, developers also become responsible for the cost of using the OpenAI API and apps that leverage cutting-edge models like GPT-4 can carry a large bill if usage grows. Multiply that cost burden across several app ideas and that's a lot of overhead, making it harder to justify building new app ideas.
+
+As a result, it’s becoming increasingly common to allow users to paste their personal OpenAI API key directly into the app. Not only is this bad security, it’s also super annoying for users to manually paste their API key in every new app that they want to try. 
+
+By offering a way for users to sign in with their own OpenAI API key, Genesis provides a safer way for users to try more AI apps and empowers developers to build their app ideas more easily, without taking on all of the cost burden for compute. It’s a win-win for everyone involved.
 
 ### Installation
 
@@ -70,19 +80,7 @@ const result = await fetch(`${baseURL}/chat/completions`, {
 ## FAQ
 
 <details>
-  <summary>1. Why does this product exist?</summary>
-  
-  **Because we believe it should be easier for developers to experiment and build new concepts for AI apps.**
-    
-  For each new app they build, developers currently need to manage the cost of using the OpenAI API. Apps that leverage cutting-edge models like GPT-4 can carry large costs if usage grows and the overhead costs can really add up if the developer is shipping many AI apps, but still searching for product-market fit. 
-    
-  As a result, it’s becoming increasingly common to allow users to paste their personal [OpenAI API key directly into the app](https://x.com/steveruizok/status/1730519276233076954?s=20). Not only is this a terrible security practice, it’s also super annoying for users to manually paste their API key in every new app that they want to try. 
-    
-  So by offering a safe & simple product for users to sign in with their own OpenAI API key, Genesis provides a safer way for users to try more AI apps and empowers developers to build apps more easily, without taking on all of the cost burden for compute. It’s a win-win for everyone involved.
-</details>
-
-<details>
-  <summary>2. How does it work?</summary>
+  <summary>How does it work?</summary>
 
   **Requesting an OpenAI API key from the user**
 
@@ -98,14 +96,14 @@ const result = await fetch(`${baseURL}/chat/completions`, {
 </details>
 
 <details>
-  <summary>3. How is user data secured?</summary>
+  <summary>How is user data secured?</summary>
   
   - **Encrypted API keys**. User API keys are wrapped in (encrypted) JWTs for both storage and transmission, meaning the key is never directly exposed to the requesting site or transmitted over the network in plain text.
   - **Reverse proxy**. Genesis hosts a secure intermediary layer for proxying OpenAI API requests, which handles decrypting the user's API key, and forwarding the request to OpenAI. The reverse proxy allows the client to use the full functionality of the OpenAI API (including streaming) without ever handling the user API key.
 </details>
 
 
-## For users: how do I get an OpenAI API key?
+## For users: How do I get an OpenAI API key?
 
 For now, it’s a manual process:
 
