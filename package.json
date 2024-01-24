@@ -17,6 +17,7 @@
   "dependencies": {
     "@passes/reqs": "^0.1.5"
   },
+  "license": "MIT",
   "homepage": "https://github.com/genesis-xyz/ai",
   "repository": {
     "type": "git",
