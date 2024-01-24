@@ -10,12 +10,24 @@
     }
   },
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "tsc"
+    "build": "tsc"
   },
   "type": "module",
   "types": "types/index.d.ts",
   "dependencies": {
     "@passes/reqs": "^0.1.5"
-  }
+  },
+  "homepage": "https://github.com/genesis-xyz/ai",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:genesis-xyz/ai.git"
+  },
+  "keywords": [
+    "ai",
+    "openai",
+    "sign in",
+    "auth",
+    "passes",
+    "genesis"
+  ]
 }
