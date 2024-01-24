@@ -120,6 +120,6 @@ For now, it’s a manual process:
     
     <img width="1512" alt="api-key-list" src="https://github.com/genesis-xyz/ai/assets/1638987/6d67ff7c-2986-41a4-9de2-f900516793d3">
     
-4. Paste the API key in Genesis and approve the request.
+4. Paste the API key in the text field and approve the request.
     
     <img width="1728" alt="genesis-request" src="https://github.com/genesis-xyz/ai/assets/1638987/50edcd88-dbee-4bc4-b3d6-e80262d43de0">
