@@ -12,7 +12,7 @@ For each new app they build, developers also become responsible for the cost of 
 
 As a result, it’s becoming increasingly common to allow users to paste their personal OpenAI API key directly into the app. Not only is this bad security, it’s also super annoying for users to manually paste their API key in every new app that they want to try. 
 
-By offering a product for users to sign in with their own OpenAI API key, Genesis provides a safer way for users to try more AI apps and empowers developers to build their app ideas more easily, without taking on all of the cost burden for compute. It’s a win-win for everyone involved.
+By offering a way for users to sign in with their own OpenAI API key, Genesis provides a safer way for users to try more AI apps and empowers developers to build their app ideas more easily, without taking on all of the cost burden for compute. It’s a win-win for everyone involved.
 
 ### Installation
 
